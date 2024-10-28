@@ -35,14 +35,13 @@ vim.keymap.set('n', '<C-h>', '<Cmd>BufferPrevious<CR>')
 vim.keymap.set('n', '<C-l>', '<Cmd>BufferNext<CR>')
 vim.keymap.set('n', '<C-d>', '<Cmd>BufferClose<CR>')
 
--- vim.keymap.set('n', '<ESC>', ':noh<CR><ESC>', {silent=true})
-vim.keymap.set('n', '<ESC>', '<C-w><C-w>')
+vim.keymap.set('n', '<ESC>', ':noh<CR><ESC>', {silent=true})
 
 vim.keymap.set('n', '<C-p>', '<Cmd>Neotree<CR>')
 
--- vim.api.nvim_create_autocmd("FileType", {
---     pattern = "neo-tree",
---     callback = function(args)
--- 	vim.keymap.set('n', '<ESC>', '<C-w><C-w>', {buffer = args.buf})
---     end
--- })
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "neo-tree",
+    callback = function(args)
+	vim.keymap.set('n', '<C-p>', '<C-w><C-w>', {buffer = args.buf})
+    end
+})
