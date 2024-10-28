@@ -1,5 +1,7 @@
 require("config.lazy")
 
+vim.opt.number = true
+
 vim.keymap.set('', '-', '$')
 vim.keymap.set('', ';', ':')
 
@@ -12,14 +14,11 @@ vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+yg_')
 
-vim.keymap.set('v', '<leader>d', '"+d')
-vim.keymap.set('n', '<leader>d', '"+d')
+vim.keymap.set({'n', 'v'}, '<leader>d', '"+d')
 vim.keymap.set('n', '<leader>D', '"+D')
 
-vim.keymap.set('n', '<leader>p', '"+p')
-vim.keymap.set('n', '<leader>P', '"+P')
-vim.keymap.set('v', '<leader>p', '"+p')
-vim.keymap.set('v', '<leader>P', '"+P')
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p')
+vim.keymap.set({'n', 'v'}, '<leader>P', '"+P')
 
 vim.keymap.set('', '<D-v>', '<C-r>*')
 
@@ -30,6 +29,9 @@ vim.keymap.set('v', '>', '>gv')
 
 vim.keymap.set('v', '<C-/>', 'gcgv')
 vim.keymap.set('n', '<C-/>', 'gcc')
+
+vim.keymap.set('n', '<C-k>', '<C-u>zz')
+vim.keymap.set('n', '<C-j>', '<C-d>zz')
 
 vim.keymap.set('n', '<C-h>', '<Cmd>BufferPrevious<CR>')
 vim.keymap.set('n', '<C-l>', '<Cmd>BufferNext<CR>')

@@ -9,6 +9,9 @@ return {
 			vim.keymap.set({'x', 'o'}, 's', '<Plug>(leap-forward)')
 			vim.keymap.set({'x', 'o'}, 'S', '<Plug>(leap-backward)')
 		end,
+		opts = {
+			case_sensitive = false
+		}
 	}
 }
 
