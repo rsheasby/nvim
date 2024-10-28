@@ -1,6 +1,6 @@
 require("config.lazy")
 
-vim.opt.number = true
+vim.o.number = true
 
 vim.keymap.set('', '-', '$')
 vim.keymap.set('', ';', ':')
